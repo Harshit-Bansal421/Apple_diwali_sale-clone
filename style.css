@@ -1027,7 +1027,7 @@ body {
 footer {
   width: 1040px;
   margin: auto;
-  padding: 22px 0px;
+  padding: 22px 0px 22px 3px;
   overflow: hidden;
 }
 
@@ -1183,6 +1183,10 @@ footer {
   color: #06c;
 }
 
+.last-part-1>:nth-child(1) span {
+  white-space: nowrap;
+}
+
 .last-part-2 {
   display: flex;
   justify-content: space-between;
@@ -1216,6 +1220,7 @@ footer {
 }
 
 .two a {
+  white-space: nowrap;
   padding: 0px 9px;
   text-decoration: none;
   color: #6c6c6d;
@@ -1263,6 +1268,10 @@ footer {
     flex-direction: column;
     justify-content: flex-start;
     align-items: start;
+  }
+
+  .two>:nth-child(1){
+    padding-left: 0px;
   }
 
 }
@@ -1519,8 +1528,11 @@ footer {
   }
 }
 
-@media (max-width: 538px) {
-  .last-part-1>:nth-child(1) span {
-    display: block;
+@media (max-width : 405px) {
+
+  .last-part-2,
+  .last-part-1 {
+    font-size: 11px;
   }
+
 }
