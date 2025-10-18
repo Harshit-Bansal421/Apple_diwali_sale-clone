@@ -7,15 +7,22 @@ let navMenu = document.createElement("li");
 navMenu.innerHTML = `<a href="" class="nav-icons nav-icon-menu"><span class="icon-image">
             <img src="assets/menu.svg" alt="APPLE">
           </span></a>`;
-window.addEventListener("resize", () => {
+function updateMenu() {
   if (window.innerWidth < 900) {
     if (!navItem.contains(navMenu)) {
       navItem.appendChild(navMenu);
     }
-  } else if (navItem.contains(navMenu)) {
-    navItem.removeChild(navMenu);
+  } else {
+    if (navItem.contains(navMenu)) {
+      navItem.removeChild(navMenu);
+    }
   }
-});
+}
+
+window.addEventListener("resize", updateMenu);
+
+// Initial check on page load
+updateMenu();
 
 /** for dropdown effect in navitems **/
 
