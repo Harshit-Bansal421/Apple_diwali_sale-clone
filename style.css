@@ -1407,6 +1407,8 @@ footer {
   }
 
   .third-rem-img-div img {
+    display: flex;
+    justify-content: center;
     width: 198px;
     height: 198px;
   }
